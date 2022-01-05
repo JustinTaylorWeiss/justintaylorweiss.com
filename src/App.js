@@ -1,17 +1,19 @@
-import { BrowserRouter, Link, Route, Switch, Redirect } from 'react-router-dom';
+import "./App.css"
 import React from 'react';
-import styled from "styled-components";
-import './global/styles/App.css';
+import { LandingTile } from "./subcomponents/landingTile";
+import { ArtTile } from "./subcomponents/artTile";
+import { AboutMeTile } from "./subcomponents/aboutMeTile";
+import { ContactMeTile } from "./subcomponents/contactMeTile";
+import { MyProjectsTile } from "./subcomponents/myProjectsTile";
+import { ReturnToTopTile } from "./subcomponents/returnToTopTile";
 
-import { Home } from './home'
 
-function App() {
-
-    return <>
-        <Route path="/" exact={true}>
-            <Home/>
-        </Route>
-    </>
-}
+const App = () => <>
+    <LandingTile/>
+    <AboutMeTile/>
+    <ContactMeTile/>
+    <MyProjectsTile/>
+    <ReturnToTopTile/>
+</>
 
 export default App;

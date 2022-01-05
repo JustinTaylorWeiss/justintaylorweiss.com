@@ -9,6 +9,7 @@ html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   margin: 0;
+
 }
 body {
   max-width: 100%;
@@ -25,3 +26,45 @@ img {
   -webkit-user-select: none;
   user-select: none;
 }
+
+@media only screen and (max-aspect-ratio: 5/3) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-aspect-ratio: 3/2) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 4/3) {
+  /* Big Design Swap */
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+
+/*font-size: max(1.175vh,  0.625vw);*/

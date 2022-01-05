@@ -50,10 +50,14 @@ export const ContactMeTile = ({}) => (
             <hr/>
             <g.ListRow>
                 <g.TextBlockL>
-                    numeral#3694
+                    <g.WOH>
+                        numeral#3694
+                    </g.WOH>
                 </g.TextBlockL>
                 <g.TextBlockR>
-                    Discord
+                    <g.WOH>
+                        Discord
+                    </g.WOH>
                 </g.TextBlockR>
             </g.ListRow>
             <hr/>

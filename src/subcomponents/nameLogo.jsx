@@ -4,8 +4,7 @@ export const PlacedNameLogo = ({}) => (
     <g.LogoTextWrapper>
         JUSTIN<br/>
         TAYLOR<br/>
-        WEISS<br/>
-        .COM
+        WEISS
     </g.LogoTextWrapper>
 )
 
@@ -13,7 +12,6 @@ export const InplaceNameLogo = ({}) => (
     <g.InplaceLogoTextWrapper>
         JUSTIN<br/>
         TAYLOR<br/>
-        WEISS<br/>
-        .COM
+        WEISS
     </g.InplaceLogoTextWrapper>
 );

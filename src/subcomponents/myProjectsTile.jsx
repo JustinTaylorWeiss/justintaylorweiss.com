@@ -1,4 +1,5 @@
 import * as g from "../global/components"
+import resume from "../assets/resume.pdf";
 
 export const MyProjectsTile = ({}) => (
     <g.BackgroundWrapper color="#ffcd01" id="projects">
@@ -14,11 +15,15 @@ export const MyProjectsTile = ({}) => (
                         <b>SecInt</b>
                     </g.WOH>
                 </g.TextBlockL>
-                <g.AlignLeftText>
-                    Ribeye andouille cupim short loin t-bone capicola cow pig salami pork belly landjaeger tongue buffalo tenderloin tri-tip.
-                </g.AlignLeftText>
+                <g.AlignSmallLeftText>
+                    A company site designed and built using a website builder with custom code and styling.
+                </g.AlignSmallLeftText>
             </g.ListColumn>
             <hr/>
+            <g.ResumeLink onClick={() => window.open(resume, '_blank')}>
+                <b>Resume</b>
+                <hr/>
+            </g.ResumeLink>
         </g.ListWrap>
     </g.BackgroundWrapper>
 );

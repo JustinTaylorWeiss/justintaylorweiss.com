@@ -1,33 +1,64 @@
 import styled from "styled-components";
-import * as g from "../global/components";
 import { UpArrow } from "../assets/upArrow";
-import { InplaceNameLogo } from "./nameLogo";
+
+const SmallBackgroundWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100vw;
+    height: 20vh;
+`;
+
+const LogoTextWrapper = styled.div`
+    position: static;
+    padding-left: 5vw;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin: 0;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+`;
+
+const NameLogo = ({}) => (
+    <LogoTextWrapper>
+        JUSTIN<br/>
+        TAYLOR<br/>
+        WEISS
+    </LogoTextWrapper>
+)
 
 const StyledUpArrow = styled(UpArrow)`
-    padding-right: 5vw;
+    margin-right: 5vw;
     display: block;
-    width: 18rem;
-    height: 18rem;
+    height: 10vh;
+    width: 10vh;
     :hover {
         fill: #FFFFFF
-    }
-    @media only screen and (min-width: 700px) and (max-height: 700px) {
-        width: 13rem;
-        height: 13rem;
-    }
-    @media only screen and (min-width: 900px) and (max-height: 900px) {
-        width: 13rem;
-        height: 13rem;
-    }
-    @media only screen and (min-width: 1200px) and (max-height: 900px) {
-        width: 9rem;
-        height: 9rem;
     }
 `;
 
 export const ReturnToTopTile = ({}) => (
-    <g.HalfBackgroundWrapper color="#ee1cc0">
-        <InplaceNameLogo/>
+    <SmallBackgroundWrapper color="#ee1cc0">
+        <NameLogo/>
         <StyledUpArrow onClick={() => window.document.body.scrollIntoView()}/>
-    </g.HalfBackgroundWrapper>
+    </SmallBackgroundWrapper>
 );

@@ -1,73 +1,87 @@
 import styled from "styled-components";
 import * as g from "../global/components"
 import resume from "../assets/resume.pdf";
+import { useMediaQuery } from 'react-responsive'
 import { ComputerIcon } from "../assets/computerIcon";
-import { PlacedNameLogo } from "./nameLogo";
+
+
+const PlacedLogoTextWrapper = styled.div`
+    width: 50vw;
+    height: 50vh;
+    padding: 8vh 0 0 8vh;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.65rem;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+    
+    @media only screen and (max-aspect-ratio: 5/3) {
+        width: auto;
+        height: 20vh;
+        padding: 4vh 0 4vh 8vw;
+    }
+    @media only screen and (max-aspect-ratio: 1/1) {
+        padding: 0;
+        height: 50vh;
+        font-size: 5rem;
+        letter-spacing: 1.5rem;
+        padding: 10vh 0 10vh 0;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 2.5rem;
+        letter-spacing: 1.2rem;
+        padding: 10vh 0 10vh 0;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+    @media only screen and (max-width: 365px) {
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+        padding: 10vh 0 10vh 0;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+`;
+
+const PlacedNameLogo = ({}) => (
+    <PlacedLogoTextWrapper>
+        JUSTIN<br/>
+        TAYLOR<br/>
+        WEISS
+    </PlacedLogoTextWrapper>
+)
 
 const StyledComputerIcon = styled(ComputerIcon)`
-    position: absolute;
-    right: 10%;
-    margin: 5vh 0px;
-    width: 66rem;
-    height: 66rem;
+    display: block;
+    position: relative;
+    margin: 0 auto 0 auto;
     @media only screen and (max-aspect-ratio: 5/3) {
-        transform: translate(0, -50%);
-        top: 40%;
-        width: 80rem;
-        height: 80rem;
+        width: 80vh;
     }
-    @media only screen and (max-aspect-ratio: 3/2) {
-        transform: translate(0, -50%);
-        top: 40%;
-        width: 90rem;
-        height: 90rem;
+    @media only screen and (max-aspect-ratio: 1/1) {
+        width: 50vh;
     }
-    @media only screen and (max-aspect-ratio: 4/3) {
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        width: 80rem;
-        height: 80rem;
-    }
-    @media only screen and (max-height: 1100px) {
-        width: 50rem;
-        height: 50rem;
-    }
-    @media only screen and (max-width: 1100px) {
-        width: 50rem;
-        height: 50rem;
-    }
-    @media only screen and (max-width: 900px) {
-        margin-top: 15vh;
-        width: 60rem;
-        height: 60rem;
-    }
-    @media only screen and (max-width: 300px) {
-        width: 50rem;
-        height: 50rem;
-    }
-    @media only screen and (min-width: 1500px) and (max-height: 900px) {
-        width: 30rem;
-        height: 30rem;
-    }
-    @media only screen and (min-width: 900px) and (max-height: 900px) {
-        width: 50rem;
-        height: 50rem;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 700px) {
-        width: 50rem;
-        height: 50rem;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 500px) {
-        width: 30rem;
-        height: 30rem;
-    }
-    @media only screen and (min-width: 1200px) and (max-height: 900px) {
-        width: 20rem;
-        height: 20rem;
-    }
+`;
 
-
+const NavTextWrapper = styled.div`
+    width: 50vw;
+    height: 50vh;
+    padding: 40vh 0 0 8vh;
+    font-size: 1.8rem;
+    letter-spacing: 0.16rem;
+    font-weight: 600;
+    @media only screen and (max-aspect-ratio: 5/3) {
+        width: auto;
+        height: 20vh;
+        padding: 9vh 8vw 9vh 0;
+    }
 `;
 
 const scrollToElementWithID = (id) => {
@@ -75,27 +89,33 @@ const scrollToElementWithID = (id) => {
 }
 
 export const LandingTile = ({}) => (
-    <g.BackgroundWrapper color="#ffcd01">
-        <g.SnapFlexRow>
+    <g.Split color="#ffcd01">
+        <g.SectionBlock>
             <PlacedNameLogo/>
-            <g.SmallTextWrapper>
-                <g.WOH onClick={() => scrollToElementWithID("aboutMe")}>
-                    ABOUT
-                </g.WOH>
-                {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                <g.WOH onClick={() => scrollToElementWithID("contactMe")}>
-                    CONTACT
-                </g.WOH>
-                {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                <g.WOH onClick={() => scrollToElementWithID("projects")}>
-                    PROJECTS
-                </g.WOH>
-                {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                <g.WOH onClick={() => window.open(resume, "_blank")}>
-                    RESUME
-                </g.WOH>
-            </g.SmallTextWrapper>
-        </g.SnapFlexRow>
-        <StyledComputerIcon/>
-    </g.BackgroundWrapper>
+            {!useMediaQuery({query: '(max-aspect-ratio: 1/1)'}) && <NavText/>}
+        </g.SectionBlock>
+        <g.SectionBlock>
+            <StyledComputerIcon/>
+        </g.SectionBlock>
+    </g.Split>
 );
+
+const NavText = ({}) => (
+    <NavTextWrapper>
+        <g.Link onClick={() => scrollToElementWithID("aboutMe")}>
+            ABOUT
+        </g.Link>
+        <g.Spacer vw="2"/>
+        <g.Link onClick={() => scrollToElementWithID("projects")}>
+            PROJECTS
+        </g.Link>
+        <g.Spacer vw="2"/>
+        <g.Link onClick={() => window.open(resume, "_blank")}>
+            RESUME
+        </g.Link>
+        <g.Spacer vw="2"/>
+        <g.Link onClick={() => scrollToElementWithID("contactMe")}>
+            CONTACT
+        </g.Link>
+    </NavTextWrapper>
+)

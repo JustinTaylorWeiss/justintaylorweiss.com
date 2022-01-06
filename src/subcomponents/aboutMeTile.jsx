@@ -8,6 +8,7 @@ const ParagraphText = styled.p`
     font-size: 2rem;
     line-height: 3.5rem;
     letter-spacing: 0.2rem;
+    padding: 6vh 0 0 0;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
         height: 70vh;
@@ -24,6 +25,7 @@ const ParagraphText = styled.p`
         letter-spacing: 0.15rem;
     }
     @media only screen and (max-height: 1200px) {
+        padding: 20vh 5vw 0 5vw;
         font-size: 1.2rem;
         line-height: 2.5rem;
         letter-spacing: 0.05rem;
@@ -40,6 +42,12 @@ const ParagraphText = styled.p`
         font-size: 1rem;
         line-height: 1.8rem;
         letter-spacing: 0.1rem;
+    }
+    @media only screen and (min-aspect-ratio: 5/2) {
+        padding: 0 5vw 0 5vw;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.05rem;
     }
     @media only screen and (max-width: 425px) and (max-height: 700px) {
         padding: 8vh 10vw 0 10vw;
@@ -66,6 +74,14 @@ const ParagraphText = styled.p`
         font-size: 1rem;
         line-height: 1.5rem;
         letter-spacing: 0.2rem;
+    }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        width: 50vw;
+        height: 100vh;
+        padding: 20vh 3vw 20vh 3vw;
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.15rem;
     }
 `;
 

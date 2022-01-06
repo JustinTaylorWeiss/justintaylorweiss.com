@@ -5,7 +5,9 @@ import { useMediaQuery } from 'react-responsive'
 import { ComputerIcon } from "../assets/computerIcon";
 
 
-const PlacedLogoTextWrapper = styled.div`
+const PlacedLogoTextWrapper = styled.h1`
+    display: block;
+    margin: 0;
     width: 50vw;
     height: 50vh;
     padding: 8vh 0 0 8vh;
@@ -88,17 +90,25 @@ const scrollToElementWithID = (id) => {
     document.getElementById(id)?.scrollIntoView();
 }
 
-export const LandingTile = ({}) => (
-    <g.Split color="#ffcd01">
+export const LandingTile = ({}) => {
+
+    const apectRatio = useMediaQuery({query: '(max-aspect-ratio: 1/1)'});
+    const minWidth =  useMediaQuery({query: '(min-width: 700px)'});
+    const maxHeight = useMediaQuery({query: '(max-height: 400px)'});
+
+    return <g.Split color="#ffcd01">
         <g.SectionBlock>
             <PlacedNameLogo/>
-            {!useMediaQuery({query: '(max-aspect-ratio: 1/1)'}) && <NavText/>}
+            {
+                !(apectRatio || (minWidth && maxHeight)) 
+                && <NavText/>
+            }
         </g.SectionBlock>
         <g.SectionBlock>
             <StyledComputerIcon/>
         </g.SectionBlock>
     </g.Split>
-);
+};
 
 const NavText = ({}) => (
     <NavTextWrapper>

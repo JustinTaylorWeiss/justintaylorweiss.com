@@ -15,6 +15,9 @@ const ProjectRow = styled.div`
     @media only screen and (max-width: 800px) {
         height: 20vh;
     }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        height: 20vh;
+    }
 `;
 
 const SmallParagraphText = styled.p`
@@ -51,6 +54,12 @@ const SmallParagraphText = styled.p`
         letter-spacing: 0.08rem;
         font-size: 1rem;
     }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        line-height: 1.1rem;
+        letter-spacing: 0.08rem;
+        font-size: 0.75rem;
+    }
+    
 `;
 
 export const MyProjectsTile = ({}) => (

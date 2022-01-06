@@ -28,12 +28,15 @@ export const SectionBlock = styled.div`
     }
 `;
 
-export const BigTextWrapper = styled.div`
+export const BigTextWrapper = styled.h2`
+    display: block;
+    margin: 0;
     width: 50vw;
     height: 100vh;
     font-weight: 900;
-    font-size: 20rem;
+    font-size: 18rem;
     line-height: 18rem;
+    padding-left: 3rem;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
         height: 30vh;
@@ -72,6 +75,10 @@ export const BigTextWrapper = styled.div`
         font-size: 7rem;
         line-height: 8rem;
     }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        font-size: 5rem;
+        line-height: 6rem;
+    }
 `;
 
 export const Link = styled.a`
@@ -99,6 +106,10 @@ export const Link = styled.a`
     }
     @media only screen and (min-width: 1000px) and (max-height: 700px) {
         font-size: 1rem;
+        font-weight: 600;
+    }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        font-size: 1.1rem;
         font-weight: 600;
     }
 `;

@@ -16,6 +16,9 @@ const ContactRow = styled.div`
     @media only screen and (min-width: 1000px) and (max-height: 700px) {
         height: 13vh;
     }
+    @media only screen and (min-width: 700px) and (max-height: 400px) {
+        height: 15vh;
+    }
 `;
 
 export const ContactMeTile = ({}) => (

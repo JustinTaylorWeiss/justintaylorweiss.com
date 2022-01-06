@@ -8,15 +8,13 @@ html {
     color: black;
     max-width: 100%;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    background-image: linear-gradient(#ffcd01, #ee1cc0);
     margin: 0;
 }
 body {
     max-width: 100%;
     overflow: hidden;
     margin: 0;
-    background-color: #000000;
+    background-color: #ee1cc0;
     background-image: linear-gradient(#ffcd01, #ee1cc0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

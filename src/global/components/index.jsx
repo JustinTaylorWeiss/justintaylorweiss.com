@@ -5,7 +5,6 @@ export const Split = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
     width: 100vw;
     height: 100vh;
     @media only screen and (max-aspect-ratio: 5/3) {

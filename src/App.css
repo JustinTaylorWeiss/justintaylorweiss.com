@@ -9,11 +9,11 @@ html {
     font-family: Arial, sans-serif;
     color: black;
     overflow-y: scroll;
-    background-color: #ffcd01;
+    background-color: #ee1cc0;
     white-space: normal;
 }
 body {
-    background-color: #ffcd01;
+    background-color: #ee1cc0;
     overflow: hidden;
     overscroll-behavior-y: none;
     background: linear-gradient(#ffcd01, #ee1cc0);

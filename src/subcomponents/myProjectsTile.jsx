@@ -2,80 +2,49 @@ import styled from "styled-components";
 import * as g from "../global/components"
 import resume from "../assets/resume.pdf";
 import { useMediaQuery } from 'react-responsive'
+import { ReactFitty } from "react-fitty"
+import React from "react";
 
 const ProjectRow = styled.div`
     width: 90%;
-    height: 15vh;
-    margin-top: 3vh;
+    height: 16vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: left;
-    @media only screen and (max-width: 800px) {
-        height: 20vh;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 400px) {
+    @media only screen and (max-aspect-ratio: 9/10) {
         height: 20vh;
     }
 `;
 
 const SmallParagraphText = styled.p`
-    line-height: 2rem;
-    letter-spacing: 0.15rem;
-    font-size: 1.5rem;
-    @media only screen and (max-width: 600px) {
-        line-height: 1.9rem;
-        letter-spacing: 0.1rem;
-        font-size: 1.3rem;
+    margin: 0;
+    font-size: min(2.75vh, 1.5vw);
+    letter-spacing: 0.075em;
+    @media only screen and (max-aspect-ratio: 5/3) {
+        font-size: min(2.1vw, 2.4vh);
     }
-    @media only screen and (max-width: 425px) {
-        line-height: 1.6rem;
-        letter-spacing: 0.08rem;
-        font-size: 1.1rem;
+    @media only screen and (max-aspect-ratio: 9/10) {
+        font-size: min(4vw, 1.85vh);
     }
-    @media only screen and (max-width: 425px) and (max-height: 700px) {
-        line-height: 1.4rem;
-        letter-spacing: 0.07rem;
-        font-size: 1rem;
-    }
-    @media only screen and (max-width: 425px) and (max-height: 600px) {
-        line-height: 1.3rem;
-        letter-spacing: 0.05rem;
-        font-size: 0.8rem;
-    }
-    @media only screen and (max-width: 300px) {
-        line-height: 1.3rem;
-        letter-spacing: 0.05rem;
-        font-size: 0.75rem;
-    }
-    @media only screen and (min-width: 1000px) and (max-height: 750px) {
-        line-height: 1.3rem;
-        letter-spacing: 0.08rem;
-        font-size: 1rem;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 400px) {
-        line-height: 1.1rem;
-        letter-spacing: 0.08rem;
-        font-size: 0.75rem;
-    }
-    
 `;
 
-export const MyProjectsTile = ({}) => (
-    <g.Split color="#ffcd01" id="projects">
-        <g.SectionBlock>
-            <g.BigTextWrapper>
-                PROJ
-                {!useMediaQuery({query: '(max-aspect-ratio: 5/3)'}) && <br/>}
-                ECTS
-            </g.BigTextWrapper>
-        </g.SectionBlock>
-        <g.SectionBlock>
+export const MyProjectsTile = ({}) => {
+    
+    return <g.Split color="#ffcd01" id="projects">
+        <g.TopSectionBlock>
+                <g.BigTextWrapper id="projectsBT">
+                    PROJ
+                    {!useMediaQuery({query: '(max-aspect-ratio: 5/3)'}) && <br/>}
+                    ECTS
+                </g.BigTextWrapper>
+        </g.TopSectionBlock>
+        <g.BottomSectionBlock>
             <ProjectsTable/>
-        </g.SectionBlock>
+        </g.BottomSectionBlock>
     </g.Split>
-);
+};
 
 const ProjectsTable = ({}) => (
     <g.Table>

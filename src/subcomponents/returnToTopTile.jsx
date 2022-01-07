@@ -15,7 +15,7 @@ const LogoTextWrapper = styled.div`
     position: static;
     padding-left: 5vw;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2vh;
     letter-spacing: 10px;
     margin: 0;
 
@@ -26,14 +26,7 @@ const LogoTextWrapper = styled.div`
         -ms-user-select: none; 
             user-select: none;
 
-    @media only screen and (max-width: 1000px) {
-        font-size: 1.2rem;
-        letter-spacing: 0.5rem;
-        text-align: center;
-    }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
-        font-size: 1.2rem;
-        letter-spacing: 0.5rem;
+    @media only screen and (max-aspect-ratio: 9/10) {
         text-align: center;
     }
 `;

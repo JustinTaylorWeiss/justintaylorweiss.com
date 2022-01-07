@@ -11,9 +11,10 @@ const PlacedLogoTextWrapper = styled.h1`
     width: 50vw;
     height: 50vh;
     padding: 8vh 0 0 8vh;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 2rem;
-    letter-spacing: 0.65rem;
+    letter-spacing: 0.35em;
+    line-height: 1.40em;
 
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
@@ -21,36 +22,22 @@ const PlacedLogoTextWrapper = styled.h1`
        -moz-user-select: none; 
         -ms-user-select: none; 
             user-select: none;
-    
+
     @media only screen and (max-aspect-ratio: 5/3) {
         width: auto;
         height: 20vh;
         padding: 4vh 0 4vh 8vw;
     }
-    @media only screen and (max-aspect-ratio: 1/1) {
+    @media only screen and (max-aspect-ratio: 9/10) {
         padding: 0;
-        height: 50vh;
-        font-size: 5rem;
-        letter-spacing: 1.5rem;
-        padding: 10vh 0 10vh 0;
-        margin: 0 auto 0 auto;
-        text-align: center;
-    }
-    @media only screen and (max-width: 600px) {
-        font-size: 2.5rem;
-        letter-spacing: 1.2rem;
-        padding: 10vh 0 10vh 0;
-        margin: 0 auto 0 auto;
-        text-align: center;
-    }
-    @media only screen and (max-width: 365px) {
-        font-size: 1.8rem;
-        letter-spacing: 1rem;
-        padding: 10vh 0 10vh 0;
+        font-size: min(10vw, 4.6vh);
         margin: 0 auto 0 auto;
         text-align: center;
     }
 `;
+
+//font-size: 10vw;
+//font-size: 4.5vh;
 
 const PlacedNameLogo = ({}) => (
     <PlacedLogoTextWrapper>
@@ -65,10 +52,10 @@ const StyledComputerIcon = styled(ComputerIcon)`
     position: relative;
     margin: 0 auto 0 auto;
     @media only screen and (max-aspect-ratio: 5/3) {
-        width: 80vh;
+        width: min(60vw, 80vh);
     }
-    @media only screen and (max-aspect-ratio: 1/1) {
-        width: 50vh;
+    @media only screen and (max-aspect-ratio: 9/10) {
+        width: min(55vw, 40vh);
     }
 `;
 
@@ -92,21 +79,21 @@ const scrollToElementWithID = (id) => {
 
 export const LandingTile = ({}) => {
 
-    const apectRatio = useMediaQuery({query: '(max-aspect-ratio: 1/1)'});
+    const apectRatio = useMediaQuery({query: '(max-aspect-ratio: 2/3)'});
     const minWidth =  useMediaQuery({query: '(min-width: 700px)'});
     const maxHeight = useMediaQuery({query: '(max-height: 400px)'});
 
     return <g.Split color="#ffcd01">
-        <g.SectionBlock>
+        <g.HeadTopSectionBlock>
             <PlacedNameLogo/>
             {
-                !(apectRatio || (minWidth && maxHeight)) 
+                !useMediaQuery({query: '(max-aspect-ratio: 9/10)'})
                 && <NavText/>
             }
-        </g.SectionBlock>
-        <g.SectionBlock>
+        </g.HeadTopSectionBlock>
+        <g.HeadBottomSectionBlock>
             <StyledComputerIcon/>
-        </g.SectionBlock>
+        </g.HeadBottomSectionBlock>
     </g.Split>
 };
 

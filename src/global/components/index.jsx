@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Split = styled.div`
     display: flex;
@@ -12,19 +12,65 @@ export const Split = styled.div`
     }
 `;
 
-export const SectionBlock = styled.div`
+const SectionBlock = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50vw;
     height: 100vh;
+`;
+
+export const HeadTopSectionBlock = styled(SectionBlock)`
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
-        height: auto;
+        height: 20vh;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    @media only screen and (max-aspect-ratio: 9/10) {
+        height: 35vh;
+    }
+`;
+
+export const HeadBottomSectionBlock = styled(SectionBlock)`
+    @media only screen and (max-aspect-ratio: 5/3) {
+        width: 100vw;
+        height: 80vh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media only screen and (max-aspect-ratio: 9/10) {
+        height: 65vh;
+    }
+`;
+
+export const TopSectionBlock = styled(SectionBlock)`
+    justify-content: flex-start;
+    @media only screen and (max-aspect-ratio: 5/3) {
+        width: 100vw;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    @media only screen and (max-aspect-ratio: 9/10) {
+        height: 25vh;
+    }
+`;
+
+export const BottomSectionBlock = styled(SectionBlock)`
+    @media only screen and (max-aspect-ratio: 5/3) {
+        width: 100vw;
+        height: 60vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    @media only screen and (max-aspect-ratio: 9/10) {
+        height: 75vh;
     }
 `;
 
@@ -32,56 +78,17 @@ export const BigTextWrapper = styled.h2`
     display: block;
     margin: 0;
     width: 50vw;
-    height: 100vh;
     font-weight: 900;
-    font-size: 18rem;
-    line-height: 18rem;
-    padding-left: 3rem;
+    font-size: min(11vw, 20rem);
+    line-height: 1.1em;
+    letter-spacing: 0.05em;
+    padding-left: 3vw;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
-        height: 30vh;
-        font-size: 13rem;
-        line-height: 12rem;
+        height: auto;
+        font-size: min(14vw, 18vh, 20rem);
     }
-    @media only screen and (max-aspect-ratio: 1/1) {
-        width: 100vw;
-        height: 25vh;
-        font-size: 8rem;
-        line-height: 9rem;
-    }
-    @media only screen and (max-width: 800px) {
-        font-size: 6rem;
-        line-height: 7rem;
-    }
-    @media only screen and (max-width: 600px) {
-        height: 20vh;
-        font-size: 4rem;
-        line-height: 5rem;
-    }
-    @media only screen and (max-width: 425px) {
-        height: 15vh;
-        font-size: 3rem;
-        line-height: 4rem;
-    }
-    @media only screen and (max-width: 300px) {
-        font-size: 2.5rem;
-        line-height: 4rem;
-    }
-    @media only screen and (min-width: 1000px) and (max-height: 750px) {
-        font-size: 6rem;
-        line-height: 8rem;
-    }
-    @media only screen and (min-width: 1100px) and (max-height: 850px) {
-        font-size: 8rem;
-        line-height: 8rem;
-    }
-    @media only screen and (min-width: 1200px) and (max-height: 825px) {
-        font-size: 7rem;
-        line-height: 8rem;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 400px) {
-        font-size: 5rem;
-        line-height: 6rem;
+    @media only screen and (max-aspect-ratio: 9/10) {
     }
 `;
 
@@ -89,38 +96,20 @@ export const Link = styled.a`
     display: inline-block;
     text-decoration: none;
     color: black;
-    font-size: 2rem;
+    font-size: min(2.6vh, 1.8vw);
     :hover {
         color: white;
     }
-    @media only screen and (max-width: 600px) {
-        font-size: 1.2rem;
+    @media only screen and (max-aspect-ratio: 5/3) {
+        font-size: min(2.6vh, 1.8vw);
     }
-    @media only screen and (max-width: 425px) {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-    @media only screen and (max-width: 425px) and (max-height: 600px) {
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
-    @media only screen and (max-width: 300px) {
-        font-size: 0.7rem;
-        font-weight: 600;
-    }
-    @media only screen and (min-width: 1000px) and (max-height: 750px) {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-    @media only screen and (max-width: 1200px) {
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-    @media only screen and (min-width: 700px) and (max-height: 400px) {
-        font-size: 1.1rem;
-        font-weight: 600;
+    @media only screen and (max-aspect-ratio: 9/10) {
+        font-size: min(5.7vw, 2.65vh);
     }
 `;
+
+//font-size: 2.65vh
+//font-size: 5.7vw;
 
 export const Table = styled.div`
     width: 50vw;
@@ -132,33 +121,9 @@ export const Table = styled.div`
     justify-content: center;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
-        height: 70vh;
+        height: auto;
         margin: 0;
         padding: 0 5vw 0 5vw;
-    }
-    @media only screen and (max-aspect-ratio: 1/1) {
-        width: 100vw;
-        height: 75vh;
-        margin: 0;
-        padding: 0 5vw 0 5vw;
-    }
-    @media only screen and (max-width: 600px) {
-        width: 100vw;
-        height: 80vh;
-        margin: 0;
-        padding: 0 5vw 0 5vw;
-    }
-    @media only screen and (max-width: 425px) {
-        width: 100vw;
-        height: 85vh;
-        margin: 0;
-        padding: 0 5vw 0 5vw;
-    }
-    @media only screen and (min-width: 1000px) and (max-height: 750px) {
-        width: 50vw;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
     }
 `;
 

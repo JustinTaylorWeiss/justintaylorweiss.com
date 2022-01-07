@@ -56,9 +56,9 @@ const StyledUpArrow = styled(UpArrow)`
     }
 `;
 
-export const ReturnToTopTile = ({}) => (
+export const ReturnToTopTile = ({}) => <>
     <SmallBackgroundWrapper color="#ee1cc0">
         <NameLogo/>
         <StyledUpArrow onClick={() => window.document.body.scrollIntoView()}/>
     </SmallBackgroundWrapper>
-);
+</>

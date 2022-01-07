@@ -49,7 +49,7 @@ const SmallParagraphText = styled.p`
         letter-spacing: 0.05rem;
         font-size: 0.75rem;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         line-height: 1.3rem;
         letter-spacing: 0.08rem;
         font-size: 1rem;

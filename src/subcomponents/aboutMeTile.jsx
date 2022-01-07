@@ -67,7 +67,7 @@ const ParagraphText = styled.p`
         line-height: 1.3rem;
         letter-spacing: 0.1rem;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         width: 50vw;
         height: 100vh;
         padding: 20vh 0 0 3vw;

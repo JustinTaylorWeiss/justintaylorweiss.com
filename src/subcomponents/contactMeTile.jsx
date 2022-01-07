@@ -13,7 +13,7 @@ const ContactRow = styled.div`
     @media only screen and (max-width: 800px) {
         height: 12vh;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         height: 13vh;
     }
     @media only screen and (min-width: 700px) and (max-height: 400px) {

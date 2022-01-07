@@ -67,8 +67,12 @@ export const BigTextWrapper = styled.h2`
         font-size: 2.5rem;
         line-height: 4rem;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         font-size: 6rem;
+        line-height: 8rem;
+    }
+    @media only screen and (min-width: 1100px) and (max-height: 850px) {
+        font-size: 8rem;
         line-height: 8rem;
     }
     @media only screen and (min-width: 1200px) and (max-height: 825px) {
@@ -104,8 +108,12 @@ export const Link = styled.a`
         font-size: 0.7rem;
         font-weight: 600;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         font-size: 1rem;
+        font-weight: 600;
+    }
+    @media only screen and (max-width: 1200px) {
+        font-size: 1.2rem;
         font-weight: 600;
     }
     @media only screen and (min-width: 700px) and (max-height: 400px) {
@@ -146,7 +154,7 @@ export const Table = styled.div`
         margin: 0;
         padding: 0 5vw 0 5vw;
     }
-    @media only screen and (min-width: 1000px) and (max-height: 700px) {
+    @media only screen and (min-width: 1000px) and (max-height: 750px) {
         width: 50vw;
         height: 100vh;
         margin: 0;

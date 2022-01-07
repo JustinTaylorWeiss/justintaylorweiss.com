@@ -12,7 +12,7 @@ const PlacedLogoTextWrapper = styled.h1`
     height: 50vh;
     padding: 8vh 0 0 8vh;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: min(2.1vw, 4.85vh);
     letter-spacing: 0.35em;
     line-height: 1.40em;
 
@@ -25,19 +25,16 @@ const PlacedLogoTextWrapper = styled.h1`
 
     @media only screen and (max-aspect-ratio: 5/3) {
         width: auto;
-        height: 20vh;
-        padding: 4vh 0 4vh 8vw;
+        height: auto;
+        padding: 0 0 0 8vw;
     }
-    @media only screen and (max-aspect-ratio: 9/10) {
+    @media only screen and (max-aspect-ratio: 9/10){
         padding: 0;
         font-size: min(10vw, 4.6vh);
         margin: 0 auto 0 auto;
         text-align: center;
     }
 `;
-
-//font-size: 10vw;
-//font-size: 4.5vh;
 
 const PlacedNameLogo = ({}) => (
     <PlacedLogoTextWrapper>
@@ -62,14 +59,14 @@ const StyledComputerIcon = styled(ComputerIcon)`
 const NavTextWrapper = styled.div`
     width: 50vw;
     height: 50vh;
-    padding: 40vh 0 0 8vh;
     font-size: 1.8rem;
+    padding: 40vh 0 0 8vh;
     letter-spacing: 0.16rem;
     font-weight: 600;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: auto;
-        height: 20vh;
-        padding: 9vh 8vw 9vh 0;
+        height: auto;
+        padding: 0 8vw 0 0;
     }
 `;
 
@@ -79,16 +76,20 @@ const scrollToElementWithID = (id) => {
 
 export const LandingTile = ({}) => {
 
-    const apectRatio = useMediaQuery({query: '(max-aspect-ratio: 2/3)'});
-    const minWidth =  useMediaQuery({query: '(min-width: 700px)'});
-    const maxHeight = useMediaQuery({query: '(max-height: 400px)'});
-
     return <g.Split color="#ffcd01">
         <g.HeadTopSectionBlock>
-            <PlacedNameLogo/>
+            {
+                useMediaQuery({query: '(max-aspect-ratio: 9/10)'})
+                ? <PlacedNameLogo/>
+                : <g.CenterToRight>
+                    <PlacedNameLogo/>
+                </g.CenterToRight>
+            }
             {
                 !useMediaQuery({query: '(max-aspect-ratio: 9/10)'})
-                && <NavText/>
+                && <g.CenterToLeft>
+                    <NavText/>
+                </g.CenterToLeft>
             }
         </g.HeadTopSectionBlock>
         <g.HeadBottomSectionBlock>

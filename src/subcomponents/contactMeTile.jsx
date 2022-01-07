@@ -13,6 +13,7 @@ const ContactRow = styled.div`
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 14vh;
     }
+    
 `;
 
 const ContactLink = styled(g.Link)`
@@ -21,12 +22,13 @@ const ContactLink = styled(g.Link)`
     }
 `;
 
-export const ContactMeTile = ({}) => (
-    <g.Split color="#2fb0d4" id="contactMe">
+export const ContactMeTile = ({}) => {
+
+    return <g.Split color="#2fb0d4" id="contactMe">
         <g.TopSectionBlock>
             <g.BigTextWrapper>
                 CONT
-                {!useMediaQuery({query: '(max-aspect-ratio: 5/3)'}) && <br/>}
+                { !useMediaQuery({query: '(max-aspect-ratio: 5/3)'}) && <br/> }
                 ACT<br/>
                 ME
             </g.BigTextWrapper>
@@ -35,7 +37,7 @@ export const ContactMeTile = ({}) => (
             <ContactTable/>
         </g.BottomSectionBlock>
     </g.Split>
-);
+};
 
 export const ContactTable = ({}) => (
     <g.Table>

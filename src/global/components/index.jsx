@@ -32,6 +32,9 @@ export const HeadTopSectionBlock = styled(SectionBlock)`
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 35vh;
     }
+    @media (width: 450px) {
+        height: 35vh;
+    }
 `;
 
 export const HeadBottomSectionBlock = styled(SectionBlock)`
@@ -43,6 +46,9 @@ export const HeadBottomSectionBlock = styled(SectionBlock)`
         align-items: center;
     }
     @media only screen and (max-aspect-ratio: 9/10) {
+        height: 65vh;
+    }
+    @media (width: 450px) {
         height: 65vh;
     }
 `;
@@ -59,6 +65,9 @@ export const TopSectionBlock = styled(SectionBlock)`
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 25vh;
     }
+    @media (width: 450px) {
+        height: 25vh;
+    }
 `;
 
 export const BottomSectionBlock = styled(SectionBlock)`
@@ -72,6 +81,9 @@ export const BottomSectionBlock = styled(SectionBlock)`
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 75vh;
     }
+    @media (width: 450px) {
+        height: 75vh;
+    }
 `;
 
 export const BigTextWrapper = styled.h2`
@@ -79,16 +91,14 @@ export const BigTextWrapper = styled.h2`
     margin: 0;
     width: 50vw;
     font-weight: 900;
-    font-size: min(11vw, 20rem);
+    font-size: min(11vw, 20.5vh);
     line-height: 1.1em;
     letter-spacing: 0.05em;
     padding-left: 3vw;
     @media only screen and (max-aspect-ratio: 5/3) {
         width: 100vw;
         height: auto;
-        font-size: min(14vw, 18vh, 20rem);
-    }
-    @media only screen and (max-aspect-ratio: 9/10) {
+        font-size: min(14vw, 18vh);
     }
 `;
 
@@ -108,8 +118,6 @@ export const Link = styled.a`
     }
 `;
 
-//font-size: 2.65vh
-//font-size: 5.7vw;
 
 export const Table = styled.div`
     width: 50vw;
@@ -125,6 +133,20 @@ export const Table = styled.div`
         margin: 0;
         padding: 0 5vw 0 5vw;
     }
+`;
+
+export const CenterToLeft = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+`;
+
+export const CenterToRight = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 `;
 
 export const Line = styled.div`

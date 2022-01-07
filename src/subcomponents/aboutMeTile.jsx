@@ -19,10 +19,11 @@ const ParagraphText = styled.p`
         font-size: min(4vw, 1.85vh);
         padding: 0 5vw;
     }
+    @media (width: 450px) {
+        font-size: min(4vw, 1.85vh);
+        padding: 0 5vw;
+    }
 `;
-
-//font-size: 4vw;
-//font-size: 1.9vh;
 
 export const AboutMeTile = ({}) => (
     <g.Split color="#ee1cc0" id="aboutMe">

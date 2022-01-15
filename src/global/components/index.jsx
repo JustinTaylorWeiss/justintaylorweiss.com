@@ -109,6 +109,7 @@ export const Link = styled.a`
     font-size: min(2.6vh, 1.8vw);
     :hover {
         color: white;
+        cursor: pointer;
     }
     @media only screen and (max-aspect-ratio: 5/3) {
         font-size: min(2.6vh, 1.8vw);

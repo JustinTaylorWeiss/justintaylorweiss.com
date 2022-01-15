@@ -45,7 +45,8 @@ const StyledUpArrow = styled(UpArrow)`
     height: 10vh;
     width: 10vh;
     :hover {
-        fill: #FFFFFF
+        fill: #FFFFFF;
+        cursor: pointer;
     }
 `;
 

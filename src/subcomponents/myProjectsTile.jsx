@@ -2,19 +2,18 @@ import styled from "styled-components";
 import * as g from "../global/components"
 import resume from "../assets/resume.pdf";
 import { useMediaQuery } from 'react-responsive'
-import { ReactFitty } from "react-fitty"
 import React from "react";
 
 const ProjectRow = styled.div`
     width: 90%;
-    height: 16vh;
+    height: 14vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
     text-align: left;
     @media only screen and (max-aspect-ratio: 9/10) {
-        height: 20vh;
+        height: 15vh;
     }
 `;
 
@@ -55,6 +54,15 @@ const ProjectsTable = ({}) => (
             </g.Link>
             <SmallParagraphText>
                 A company site designed and built using a website builder with custom code and styling.
+            </SmallParagraphText>
+        </ProjectRow>
+        <g.Line/>
+        <ProjectRow>
+            <g.Link onClick={() => window.open('https://justintaylorweiss.github.io/GameofTwentySquares/', '_blank')}>
+                <b>Game of Twenty Squares</b>
+            </g.Link>
+            <SmallParagraphText>
+                An ancient game also known as The Royal Game of Ur made in React.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>

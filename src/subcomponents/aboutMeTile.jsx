@@ -1,4 +1,3 @@
-import { ReactFitty } from "react-fitty";
 import styled from "styled-components";
 import * as g from "../global/components"
 

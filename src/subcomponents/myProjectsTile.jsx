@@ -80,7 +80,7 @@ const ProjectsTable = ({}) => (
                 <b>Resume</b>
             </g.Link>
             <SmallParagraphText>
-                More information about who I am and what I've done
+                More information about who I am and what I've done.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>

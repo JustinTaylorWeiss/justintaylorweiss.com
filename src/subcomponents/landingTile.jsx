@@ -36,7 +36,7 @@ const PlacedLogoTextWrapper = styled.h1`
     }
 `;
 
-const PlacedNameLogo = ({}) => (
+const PlacedNameLogo = () => (
     <PlacedLogoTextWrapper>
         JUSTIN<br/>
         TAYLOR<br/>
@@ -74,7 +74,7 @@ const scrollToElementWithID = (id) => {
     document.getElementById(id)?.scrollIntoView();
 }
 
-export const LandingTile = ({}) => {
+export const LandingTile = () => {
 
     return <g.Split color="#ffcd01">
         <g.HeadTopSectionBlock>
@@ -98,7 +98,7 @@ export const LandingTile = ({}) => {
     </g.Split>
 };
 
-const NavText = ({}) => (
+const NavText = () => (
     <NavTextWrapper>
         <g.Link onClick={() => scrollToElementWithID("aboutMe")}>
             ABOUT

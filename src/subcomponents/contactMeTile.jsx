@@ -22,7 +22,7 @@ const ContactLink = styled(g.Link)`
     }
 `;
 
-export const ContactMeTile = ({}) => {
+export const ContactMeTile = () => {
 
     return <g.Split color="#2fb0d4" id="contactMe">
         <g.TopSectionBlock>
@@ -39,7 +39,7 @@ export const ContactMeTile = ({}) => {
     </g.Split>
 };
 
-export const ContactTable = ({}) => (
+export const ContactTable = () => (
     <g.Table>
         <g.Line/>
         <ContactRow>
@@ -52,10 +52,10 @@ export const ContactTable = ({}) => (
         </ContactRow>
         <g.Line/>
         <ContactRow>
-            <ContactLink onClick={() => window.open("https://www.linkedin.com/in/justin-taylor-weiss", "_blank")}>
-                justin-taylor-weiss
+            <ContactLink onClick={() => window.open("https://www.linkedin.com/in/justintweiss", "_blank")}>
+                justintweiss
             </ContactLink>
-            <ContactLink onClick={() => window.open("https://www.linkedin.com/in/justin-taylor-weiss", "_blank")}>
+            <ContactLink onClick={() => window.open("https://www.linkedin.com/in/justintweiss", "_blank")}>
                 LinkedIn
             </ContactLink>
         </ContactRow>

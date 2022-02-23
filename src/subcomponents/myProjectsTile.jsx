@@ -29,7 +29,7 @@ const SmallParagraphText = styled.p`
     }
 `;
 
-export const MyProjectsTile = ({}) => {
+export const MyProjectsTile = () => {
     
     return <g.Split color="#ffcd01" id="projects">
         <g.TopSectionBlock>
@@ -45,17 +45,8 @@ export const MyProjectsTile = ({}) => {
     </g.Split>
 };
 
-const ProjectsTable = ({}) => (
+const ProjectsTable = () => (
     <g.Table>
-        <g.Line/>
-        <ProjectRow>
-            <g.Link onClick={() => window.open('https://www.secintcorp.com', '_blank')}>
-                <b>SecInt</b>
-            </g.Link>
-            <SmallParagraphText>
-                A company site designed and built using a website builder with custom code and styling.
-            </SmallParagraphText>
-        </ProjectRow>
         <g.Line/>
         <ProjectRow>
             <g.Link onClick={() => window.open('https://justintaylorweiss.github.io/GameofTwentySquares/', '_blank')}>
@@ -72,6 +63,15 @@ const ProjectsTable = ({}) => (
             </g.Link>
             <SmallParagraphText>
                 A grocery web app made using React with Firebase for authentication, hosting, and backend.
+            </SmallParagraphText>
+        </ProjectRow>
+        <g.Line/>
+        <ProjectRow>
+            <g.Link onClick={() => window.open('https://www.secintcorp.com', '_blank')}>
+                <b>SecInt</b>
+            </g.Link>
+            <SmallParagraphText>
+                A company site designed and built using a website builder with custom code and styling.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>

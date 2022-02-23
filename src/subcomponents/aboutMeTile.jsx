@@ -24,7 +24,7 @@ const ParagraphText = styled.p`
     }
 `;
 
-export const AboutMeTile = ({}) => (
+export const AboutMeTile = () => (
     <g.Split color="#ee1cc0" id="aboutMe">
         <g.TopSectionBlock>
             <g.BigTextWrapper>

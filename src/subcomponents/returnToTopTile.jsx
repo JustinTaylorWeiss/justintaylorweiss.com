@@ -31,7 +31,7 @@ const LogoTextWrapper = styled.div`
     }
 `;
 
-const NameLogo = ({}) => (
+const NameLogo = () => (
     <LogoTextWrapper>
         JUSTIN<br/>
         TAYLOR<br/>
@@ -50,7 +50,7 @@ const StyledUpArrow = styled(UpArrow)`
     }
 `;
 
-export const ReturnToTopTile = ({}) => <>
+export const ReturnToTopTile = () => <>
     <SmallBackgroundWrapper color="#ee1cc0">
         <NameLogo/>
         <StyledUpArrow onClick={() => window.document.body.scrollIntoView()}/>

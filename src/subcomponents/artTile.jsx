@@ -1,2 +1,2 @@
 
-export const ArtTile = ({}) => {};
+export const ArtTile = () => {};

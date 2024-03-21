@@ -49,29 +49,29 @@ const ProjectsTable = () => (
     <g.Table>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://justintaylorweiss.github.io/GameofTwentySquares/', '_blank')}>
-                <b>Game of Twenty Squares</b>
+            <g.Link onClick={() => window.open('https://Infinitylumber.com', '_blank')}>
+                <b>Infiniylumber.com</b>
             </g.Link>
             <SmallParagraphText>
-                An ancient game also known as The Royal Game of Ur made in React.
+                A company site made in React.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://github.com/JustinTaylorWeiss/Grocery.me', '_blank')}>
-                <b>Grocery.me</b>
+            <g.Link onClick={() => window.open('https://langlanguage.com', '_blank')}>
+                <b>LangLanguage.com</b>
             </g.Link>
             <SmallParagraphText>
-                A grocery web app made using React with Firebase for authentication, hosting, and backend.
+                A site for learning the Lang pseudo language.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://www.secintcorp.com', '_blank')}>
-                <b>SecInt</b>
+            <g.Link onClick={() => window.open('https://justintaylorweiss.github.io/Deck-Builder/', '_blank')}>
+                <b>MTG Deck Builder</b>
             </g.Link>
             <SmallParagraphText>
-                A company site designed and built using a website builder with custom code and styling.
+                A Magic The Gathering deck builder with all the power of Scryfall made in React.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>
@@ -86,3 +86,9 @@ const ProjectsTable = () => (
         <g.Line/>
     </g.Table>
 )
+
+
+/*
+
+
+*/

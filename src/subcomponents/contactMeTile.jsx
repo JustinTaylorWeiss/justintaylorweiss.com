@@ -71,7 +71,7 @@ export const ContactTable = () => (
         <g.Line/>
         <ContactRow>
             <ContactLink>
-                numeral#3694
+                numeral
             </ContactLink>
             <ContactLink>
                 Discord

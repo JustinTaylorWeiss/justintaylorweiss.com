@@ -67,11 +67,11 @@ const ProjectsTable = () => (
         </ProjectRow>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://justintaylorweiss.github.io/Deck-Builder/', '_blank')}>
-                <b>MTG Deck Builder</b>
+            <g.Link onClick={() => window.open('https://floatmana.app/', '_blank')}>
+                <b>Floatmana.app</b>
             </g.Link>
             <SmallParagraphText>
-                A Magic The Gathering deck builder with all the power of Scryfall made in React.
+                A Magic The Gathering land base builder with all the power of Scryfall.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>

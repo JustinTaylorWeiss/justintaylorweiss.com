@@ -1,11 +1,11 @@
 import "./App.css"
 import React from 'react';
 import styled from "styled-components";
-import { LandingTile } from "./subcomponents/landingTile";
-import { AboutMeTile } from "./subcomponents/aboutMeTile";
-import { ContactMeTile } from "./subcomponents/contactMeTile";
-import { MyProjectsTile } from "./subcomponents/myProjectsTile";
-import { ReturnToTopTile } from "./subcomponents/returnToTopTile";
+import { LandingTile } from "./tiles/landingTile";
+import { AboutMeTile } from "./tiles/aboutMeTile";
+import { ContactMeTile } from "./tiles/contactMeTile";
+import { MyProjectsTile } from "./tiles/myProjectsTile";
+import { ReturnToTopTile } from "./tiles/returnToTopTile";
 
 const PageWrap = styled.div`
     display: flex;

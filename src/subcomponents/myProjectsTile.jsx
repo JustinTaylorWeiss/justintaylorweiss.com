@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as g from "../global/components"
+import { Reveal } from "../global/reveal";
 import resume from "../assets/resume.pdf";
 import { useMediaQuery } from 'react-responsive'
 import React from "react";
@@ -12,6 +13,14 @@ const ProjectRow = styled.div`
     align-items: flex-start;
     justify-content: space-evenly;
     text-align: left;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    :hover {
+        transform: translateX(12px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+        :hover { transform: none; }
+    }
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 15vh;
     }
@@ -33,14 +42,18 @@ export const MyProjectsTile = () => {
     
     return <g.Split color="#ffcd01" id="projects">
         <g.TopSectionBlock>
+            <Reveal>
                 <g.BigTextWrapper id="projectsBT">
                     PROJ
                     {!useMediaQuery({query: '(max-aspect-ratio: 5/3)'}) && <br/>}
                     ECTS
                 </g.BigTextWrapper>
+            </Reveal>
         </g.TopSectionBlock>
         <g.BottomSectionBlock>
-            <ProjectsTable/>
+            <Reveal delay="0.15s">
+                <ProjectsTable/>
+            </Reveal>
         </g.BottomSectionBlock>
     </g.Split>
 };
@@ -49,25 +62,16 @@ const ProjectsTable = () => (
     <g.Table>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://Infinitylumber.com', '_blank')}>
-                <b>Infiniylumber.com</b>
+            <g.Link href="https://trustblurbs.com" target="_blank" rel="noopener noreferrer">
+                <b>Trustblurbs.com</b>
             </g.Link>
             <SmallParagraphText>
-                A company site made in React.
+                An AI-Powered MarTech Discovery Platform.
             </SmallParagraphText>
         </ProjectRow>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open('https://langlanguage.com', '_blank')}>
-                <b>LangLanguage.com</b>
-            </g.Link>
-            <SmallParagraphText>
-                A site for learning the Lang pseudo language.
-            </SmallParagraphText>
-        </ProjectRow>
-        <g.Line/>
-        <ProjectRow>
-            <g.Link onClick={() => window.open('https://floatmana.app/', '_blank')}>
+            <g.Link href="https://floatmana.app/" target="_blank" rel="noopener noreferrer">
                 <b>Floatmana.app</b>
             </g.Link>
             <SmallParagraphText>
@@ -76,7 +80,16 @@ const ProjectsTable = () => (
         </ProjectRow>
         <g.Line/>
         <ProjectRow>
-            <g.Link onClick={() => window.open(resume, '_blank')}>
+            <g.Link href="https://langlanguage.com" target="_blank" rel="noopener noreferrer">
+                <b>LangLanguage.com</b>
+            </g.Link>
+            <SmallParagraphText>
+                A site for learning the Lang pseudo language.
+            </SmallParagraphText>
+        </ProjectRow>
+        <g.Line/>
+        <ProjectRow>
+            <g.Link href={resume} target="_blank" rel="noopener noreferrer">
                 <b>Resume</b>
             </g.Link>
             <SmallParagraphText>

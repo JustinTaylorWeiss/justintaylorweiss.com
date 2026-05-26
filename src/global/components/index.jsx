@@ -31,6 +31,9 @@ export const HeadTopSectionBlock = styled(SectionBlock)`
     }
     @media only screen and (max-aspect-ratio: 9/10) {
         height: 35vh;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3vh;
     }
     @media (width: 450px) {
         height: 35vh;
@@ -107,9 +110,13 @@ export const Link = styled.a`
     text-decoration: none;
     color: black;
     font-size: min(2.6vh, 1.8vw);
+    transition: color 0.2s ease;
     :hover {
         color: white;
         cursor: pointer;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
     }
     @media only screen and (max-aspect-ratio: 5/3) {
         font-size: min(2.6vh, 1.8vw);

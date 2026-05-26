@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as g from "../global/components"
+import { Reveal } from "../global/reveal";
 
 const ParagraphText = styled.p`
     display: block;
@@ -27,21 +28,23 @@ const ParagraphText = styled.p`
 export const AboutMeTile = () => (
     <g.Split color="#ee1cc0" id="aboutMe">
         <g.TopSectionBlock>
-            <g.BigTextWrapper>
-                ABOUT<br/>
-                ME
-            </g.BigTextWrapper>
+            <Reveal>
+                <g.BigTextWrapper>
+                    ABOUT<br/>
+                    ME
+                </g.BigTextWrapper>
+            </Reveal>
         </g.TopSectionBlock>
         <g.BottomSectionBlock>
-            <ParagraphText>
-                I'm a graduate of Farmingdale State College with a Bachelor of Science in Computer Science and Information Systems with a minor in Sociology.
-                My interest in programming began with SpriteKit when I was 14.
-                While creating my first game I fell in love with making things that could be enjoyed by anyone.
-                This drew me toward web development.
-                Now I have a focus in React and game development.
-                When I’m not making websites, I like to make or play video games.
-                Feel free to check out some of my projects or my GitHub page listed below.
-            </ParagraphText>
+            <Reveal delay="0.15s">
+                <ParagraphText>
+                    I'm a full stack developer based in New York.
+                    I work mostly with React on the front end, and lately I've been building AI-powered tools at Blurbs.
+                    I studied Computer Programming and Information Systems at Farmingdale State College, with a minor in Sociology, and recently earned a certificate in designing AI products through MIT xPro.
+                    I do my best work bridging the business and engineering sides of a project — turning what people need into products that actually deliver it.
+                    Take a look at some of my projects or my GitHub below.
+                </ParagraphText>
+            </Reveal>
         </g.BottomSectionBlock>
     </g.Split>
 );

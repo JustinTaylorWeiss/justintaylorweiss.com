@@ -44,15 +44,18 @@ const StyledUpArrow = styled(UpArrow)`
     display: block;
     height: 10vh;
     width: 10vh;
+    cursor: pointer;
+    transition: fill 0.2s ease;
     :hover {
         fill: #FFFFFF;
-        cursor: pointer;
     }
 `;
+
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 export const ReturnToTopTile = () => <>
     <SmallBackgroundWrapper color="#ee1cc0">
         <NameLogo/>
-        <StyledUpArrow onClick={() => window.document.body.scrollIntoView()}/>
+        <StyledUpArrow onClick={scrollToTop} role="button" aria-label="Return to top"/>
     </SmallBackgroundWrapper>
 </>

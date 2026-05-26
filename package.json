@@ -29,6 +29,10 @@
   "resolutions": {
     "react-error-overlay": "6.0.9"
   },
+  "overrides": {
+    "form-data": "3.0.4",
+    "protobufjs": "7.5.9"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
